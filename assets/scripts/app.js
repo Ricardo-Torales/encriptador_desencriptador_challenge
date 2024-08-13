@@ -97,5 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mostrarResultado();
     });
 
-    botonCopiar.addEventListener('click', copiarAlPortapapeles);
+    // Asignar el evento onclick al botón copiar mediante JavaScript
+    div_botonCopiar.addEventListener('click', copiarAlPortapapeles);
 });
