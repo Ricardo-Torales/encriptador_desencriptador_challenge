@@ -1,3 +1,34 @@
+function copiarAlPortapapeles() {
+    const textoACopiar = document.getElementById('mensajeConvertido').textContent;
+
+    if (!textoACopiar) {
+        console.error('No hay texto para copiar');
+        return;
+    }
+
+    console.log('Texto a copiar:', textoACopiar); // Para depuración
+
+    // Crear un elemento de texto temporal para seleccionar y copiar
+    const textarea = document.createElement('textarea');
+    textarea.value = textoACopiar;
+    document.body.appendChild(textarea);
+
+    // Seleccionar el texto
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    // Copiar el texto al portapapeles
+    const successful = document.execCommand('copy');
+    if (successful) {
+        alert('Texto copiado al portapapeles');
+    } else {
+        console.error('Error al copiar el texto');
+    }
+
+    // Eliminar el elemento de texto temporal
+    document.body.removeChild(textarea);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const encriptarBtn = document.getElementById('encriptarBtn');
     const desencriptarBtn = document.getElementById('desencriptarBtn');
@@ -54,37 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function copiarAlPortapapeles() {
-        const textoACopiar = mensajeConvertido.textContent;
-
-        if (!textoACopiar) {
-            console.error('No hay texto para copiar');
-            return;
-        }
-
-        console.log('Texto a copiar:', textoACopiar); // Para depuración
-
-        // Crear un elemento de texto temporal para seleccionar y copiar
-        const textarea = document.createElement('textarea');
-        textarea.value = textoACopiar;
-        document.body.appendChild(textarea);
-
-        // Seleccionar el texto
-        textarea.select();
-        textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-        // Copiar el texto al portapapeles
-        const successful = document.execCommand('copy');
-        if (successful) {
-            alert('Texto copiado al portapapeles');
-        } else {
-            console.error('Error al copiar el texto');
-        }
-
-        // Eliminar el elemento de texto temporal
-        document.body.removeChild(textarea);
-    }
-
     encriptarBtn.addEventListener('click', function () {
         encriptarBtn.classList.add('active');
         desencriptarBtn.classList.remove('active');
@@ -97,6 +97,5 @@ document.addEventListener('DOMContentLoaded', function () {
         mostrarResultado();
     });
 
-    // Asignar el evento onclick al botón copiar mediante JavaScript
-    div_botonCopiar.addEventListener('click', copiarAlPortapapeles);
+    botonCopiar.addEventListener('click', copiarAlPortapapeles);
 });
