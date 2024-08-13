@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const muñeco = document.getElementById('muñeco');
     const div_botonCopiar = document.getElementById('div_botonCopiar');
 
-    // Funciones de encriptar y desencriptar
     function encriptarTexto(texto) {
         const mapa = {
             'e': 'enter',
@@ -63,25 +62,27 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        console.log('Texto a copiar:', textoACopiar); // Para depuración
+
         // Crear un elemento de texto temporal para seleccionar y copiar
         const textarea = document.createElement('textarea');
         textarea.value = textoACopiar;
         document.body.appendChild(textarea);
 
-
         // Seleccionar el texto
         textarea.select();
         textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
 
-
         // Copiar el texto al portapapeles
-        document.execCommand('copy');
-
+        const successful = document.execCommand('copy');
+        if (successful) {
+            alert('Texto copiado al portapapeles');
+        } else {
+            console.error('Error al copiar el texto');
+        }
 
         // Eliminar el elemento de texto temporal
         document.body.removeChild(textarea);
-
-        alert('Texto copiado al portapapeles');
     }
 
     encriptarBtn.addEventListener('click', function () {
