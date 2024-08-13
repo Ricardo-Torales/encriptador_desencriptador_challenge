@@ -1,0 +1,265 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background: #E9ECF8;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .contenedor_logo {
+    width: auto;
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    align-items: center;
+  }
+  
+  .img_logo {
+    height: 3rem;
+  }
+  
+
+  .contenedor_principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    padding: 0 1rem;
+  }
+  
+
+  .contenedor_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .div_texto {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+  }
+  
+  .ingreso {
+    width: 100%;
+    height: 355px;
+    color: #0A3871;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 32px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .ingreso::placeholder {
+    font-size: 32px;
+    color: #0A3871;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+  }
+  
+
+  .div_advertencia {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    max-width: 350px;
+    padding-left: 1rem;
+  }
+  
+  .img_advertencia {}
+  
+  .advertencia {
+    font-size: 12px;
+    text-align: left;
+  }
+  
+
+  .div_botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 1rem;
+  }
+  
+  .boton1, .boton2 {
+    cursor: pointer;
+  }
+  
+
+  .contenedor_convertir {
+    width: 100%;
+    max-width: 327px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 32px;
+    margin: auto;
+    padding: 16px;
+    gap: 16px;
+    box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .no_mensaje {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343A40;
+    text-align: center;
+  }
+  
+  .ingrese {
+    color: #495057;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .div_botonCopiar {
+    display: none;
+  }
+
+  .boton3 {
+    width: calc(100% - 48px);
+    cursor: pointer;
+    margin: 16px 24px;
+  }
+
+  .btnT {
+    display: none;
+  }
+  
+  .muñeco {
+    display: none;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .contenedor_principal {
+      gap: 64px;
+      padding: 0 40px;
+      align-items: flex-start;
+    }
+  
+    .contenedor_logo {
+      margin-top: 73.42px;
+      margin-left: 40px;
+    }
+  
+    .contenedor_texto {
+      align-items: flex-start;
+      width: 100%;
+      max-width: 648px;
+      margin: auto;
+    }
+  
+    .div_texto {
+      max-width: 648px;
+    }
+  
+    .div_advertencia {
+      max-width: 648px;
+      padding-left: 0;
+    }
+  
+    .div_botones {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 648px;
+    }
+  
+    .contenedor_convertir {
+      width: 100%;
+      max-width: 688px;
+      margin: auto;
+    }
+
+    .boton3 {
+        width: calc(100% - 48px);
+        margin: 16px 24px;
+    }
+
+    .btnT {
+        display: block;
+      }
+
+    .btnM {
+        display: none;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .contenedor_principal {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  
+    .contenedor_logo {
+      margin-left: 77px;
+    }
+  
+    .contenedor_texto {
+      align-items: flex-start;
+      width: 688px;
+      height: 944px;
+      margin-left: 240px;
+    }
+    .div_texto {
+        height: 944px;
+    }
+  
+    .contenedor_convertir {
+      width: 400px;
+      height: 944px;
+      margin-left: auto;
+      margin-right: 40px;
+      display: flex; position: absolute;
+      right: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .div_muñeco {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .muñeco {
+      display: block;
+    }
+  
+    #mensajeConvertido, #ingreseTexto {
+      text-align: center;
+    }
+
+    .div_botonCopiar {
+        position: absolute;
+        bottom: 20px;
+        
+    }
+
+    .btnM {
+        display: block;
+      }
+
+    .btnT {
+        display: none;
+    }
+  }
+  

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="contenedor_logo">
+            <img class="img_logo" src="assets/images/logo.png" alt="Encriptador Alura">
+        </div>
+    </header>
+    <section class="contenedor_principal">
+        <section class="contenedor_texto">
+            <div class="div_texto">
+                <textarea id="texto" class="ingreso" placeholder="Ingrese su texto aquí:"></textarea>
+            </div>
+            <div class="div_advertencia">
+                <img class="img_advertencia" src="assets/images/Vector.png" alt="">
+                <span class="advertencia">Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="div_botones">
+                <img id="encriptarBtn" class="boton1" src="assets/images/Encriptar.png" alt="Encriptar">
+                <img id="desencriptarBtn" class="boton2" src="assets/images/Desencriptar.png" alt="Desencriptar">
+            </div>
+        </section>
+    
+    
+        <section id="contenedor_convertir" class="contenedor_convertir">
+            <div id="div_muñeco" class="div_muñeco">
+                <img class="muñeco" id="muñeco" src="assets/images/Muñeco.png" alt="">
+            </div>
+            <div id="div_mensajeConvertido" class="div_mensajeConvertido">
+                <h3 id="mensajeConvertido" class="no_mensaje">Ningún mensaje fue encontrado</h3>
+            </div>
+            <div id="div_ingreseTexto" class="div_ingreseTexto">
+                <p id="ingreseTexto" class="ingrese">Ingrese el mensaje que desea encriptar o desencriptar.</p>
+            </div>
+            <div id="div_botonCopiar" class="div_botonCopiar" onclick="copiarAlPortapapeles()">
+                <img id="botonCopiar" class="boton3 btnM" class="btnM" src="assets/images/Copiar.png" alt="Copiar">
+                <img id="botonCopiar" class="boton3 btnT" class="btnT" src="assets/images/Boton3.png" alt="Copiar">
+
+            </div>    
+        </section>
+    </section>
+    
+    
+    
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>
